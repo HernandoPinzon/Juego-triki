@@ -56,8 +56,24 @@ function sumama9(){
 }
 
 function turnoMaquina(){
+    max= 10;
+    min= 1;
+    let turnofinal= true
+    posiciones.forEach(element => {
+        if (element==0) {
+            turnofinal=false;
+        }
+    });
+    if (!turnofinal) {
+        do {
+            maquina = Math.floor(Math.random() * (max - min)) + min;
+        } while (posiciones[maquina-1]!=0);
+        posiciones[maquina-1]=2;
+        document.getElementById("btnTriki"+maquina).disabled = true
+        document.getElementById("triki"+maquina).src="../images/isaac.png"
+        console.log(posiciones)
+    }
     if (endgame()) {
-        
         setTimeout(function(){
             alert("el gandor es el jugador "+ ganador)
             }
@@ -67,16 +83,6 @@ function turnoMaquina(){
             }
         ,1000);
 
-    } else {
-        max= 10;
-        min= 1;
-        do {
-            maquina = Math.floor(Math.random() * (max - min)) + min;
-        } while (posiciones[maquina-1]!=0);
-        posiciones[maquina-1]=2;
-        document.getElementById("btnTriki"+maquina).disabled = true
-        document.getElementById("triki"+maquina).src="../images/isaac.png"
-        console.log(posiciones)
     }
     
 }
