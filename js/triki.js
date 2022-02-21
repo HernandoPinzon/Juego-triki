@@ -74,6 +74,9 @@ function turnoMaquina(){
         console.log(posiciones)
     }
     if (endgame()) {
+        for (let i = 1; i < 10; i++) {
+            document.getElementById("btnTriki"+i).disabled = true;
+        }
         setTimeout(function(){
             alert("el gandor es el jugador "+ ganador)
             }
