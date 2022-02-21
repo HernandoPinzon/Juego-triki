@@ -131,6 +131,34 @@ function comprobarganador(){
             ganador = 2;
         }
     }
+    if ((posiciones[1]==posiciones[4]) && (posiciones[4]==posiciones[7]) && posiciones[7]!=0) {
+        if (posiciones[0]==1) {
+            ganador = 1;
+        } else {
+            ganador = 2;
+        }
+    }
+    if ((posiciones[2]==posiciones[5]) && (posiciones[5]==posiciones[8]) && posiciones[8]!=0) {
+        if (posiciones[0]==1) {
+            ganador = 1;
+        } else {
+            ganador = 2;
+        }
+    }
+    if ((posiciones[0]==posiciones[4]) && (posiciones[4]==posiciones[8]) && posiciones[8]!=0) {
+        if (posiciones[0]==1) {
+            ganador = 1;
+        } else {
+            ganador = 2;
+        }
+    }
+    if ((posiciones[2]==posiciones[4]) && (posiciones[4]==posiciones[6]) && posiciones[6]!=0) {
+        if (posiciones[0]==1) {
+            ganador = 1;
+        } else {
+            ganador = 2;
+        }
+    }
     if (ganador==0) {
         return false;
     } else {
