@@ -77,15 +77,7 @@ function turnoMaquina(){
         for (let i = 1; i < 10; i++) {
             document.getElementById("btnTriki"+i).disabled = true;
         }
-        setTimeout(function(){
-            alert("el gandor es el jugador "+ ganador)
-            }
-        ,1000);
-        setTimeout(function(){
-                reiniciar();
-            }
-        ,1000);
-
+        document.getElementById("winner").innerHTML = ganador
     }
     
 }
