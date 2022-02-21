@@ -57,8 +57,13 @@ function sumama9(){
 
 function turnoMaquina(){
     if (endgame()) {
+        
         setTimeout(function(){
-                alert("el gandor es el jugador "+ ganador)
+            alert("el gandor es el jugador "+ ganador)
+            }
+        ,1000);
+        setTimeout(function(){
+                reiniciar();
             }
         ,1000);
 
@@ -95,6 +100,7 @@ function endgame() {
         }
     }
     if (turnos>8) {
+        ganador="EMPATE";
         return true;
     }
     
@@ -111,14 +117,14 @@ function comprobarganador(){
         }
     }
     if ((posiciones[3]==posiciones[4]) && (posiciones[4]==posiciones[5]) && posiciones[5]!=0) {
-        if (posiciones[0]==1) {
+        if (posiciones[3]==1) {
             ganador = 1;
         } else {
             ganador = 2;
         }
     }
     if ((posiciones[6]==posiciones[7]) && (posiciones[7]==posiciones[8]) && posiciones[8]!=0) {
-        if (posiciones[0]==1) {
+        if (posiciones[6]==1) {
             ganador = 1;
         } else {
             ganador = 2;
@@ -132,14 +138,14 @@ function comprobarganador(){
         }
     }
     if ((posiciones[1]==posiciones[4]) && (posiciones[4]==posiciones[7]) && posiciones[7]!=0) {
-        if (posiciones[0]==1) {
+        if (posiciones[1]==1) {
             ganador = 1;
         } else {
             ganador = 2;
         }
     }
     if ((posiciones[2]==posiciones[5]) && (posiciones[5]==posiciones[8]) && posiciones[8]!=0) {
-        if (posiciones[0]==1) {
+        if (posiciones[2]==1) {
             ganador = 1;
         } else {
             ganador = 2;
@@ -153,7 +159,7 @@ function comprobarganador(){
         }
     }
     if ((posiciones[2]==posiciones[4]) && (posiciones[4]==posiciones[6]) && posiciones[6]!=0) {
-        if (posiciones[0]==1) {
+        if (posiciones[2]==1) {
             ganador = 1;
         } else {
             ganador = 2;
